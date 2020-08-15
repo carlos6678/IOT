@@ -1,0 +1,39 @@
+<style>
+    .container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background-color: silver;
+    }
+    button{
+        background-color: green;
+        border:none;
+        color: white;
+        width: 300px;
+        height: 100px;
+        margin:50px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+</style>
+
+<div class="container">
+    <button data-id="a">Ligar</button>
+    <button data-id="b">Desligar</button>
+</div>
+
+<script>
+
+    document.querySelectorAll('button').forEach(button=>{
+        button.addEventListener('click',function(e){
+            const id = e.target.getAttribute('data-id')
+            fetch('http://(seu ip):3000/enviar',{
+                method:'POST',
+                body:JSON.stringify({id:id}),
+                headers: { "Content-Type": "application/json" }
+            })
+        })
+    })
+</script>
