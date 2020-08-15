@@ -8,11 +8,12 @@ Projeto simples de IOT
 - **Arduino**
 
 # Como Testar 
-- Na pasta **backend** user ```npm install``` depois no codigo da pasta **backend** deixei o codigo comentado para que você possa preencher com suas credencias
+- Na pasta **backend** use ```npm install``` depois no codigo da pasta **backend** deixei o codigo comentado para que você possa preencher com suas credencias
 - instale a biblioteca **pika** do python, para isso abra o terminal e rode o comando ```pip install pika```
 - Na pasta **consumer**deixei comentado o codigo para que você preenchar com suas credenciais
 - Depois existe um arquivo na raiz do projeto chamado arduino.ino, abra o com a IDE do arduino e compile para a placa
 - Ainda na pasta **consumer** digite no terminal ```python consumer.py```
+- Ainda na pasta **backend** digite no terminal ```npm run start```
 - Agora e só testar
 
 # Lembrete
